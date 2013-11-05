@@ -14,6 +14,9 @@ La práctica consiste en crear una clase para representar matrices usando TDD co
 la metodologia de introduccion continua de manera que permita la ejecución de las pruebas definidas con rspec cuando
 se modifiquen.
 
+### Estado
+
+[![Build Status](https://travis-ci.org/alu0100537031/prct08.png?branch=master)](https://travis-ci.org/alu0100537031/prct08)
 
 ---
 
