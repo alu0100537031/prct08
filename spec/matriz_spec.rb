@@ -20,5 +20,11 @@ describe Matriz do
   it "Comprobando que la matriz se muestra correctamente 2x2" do
     @mat1.mostrar_Matriz.should eq(" 2 1 \n 3 2 \n ")
   end
+
+  it "Comprobando que la matriz accede al subindice [0,0]" do
+    @mat1.mat[0][0].should eq(2)
+  end
+  
+
   
 end
