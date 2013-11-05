@@ -24,6 +24,10 @@ describe Matriz do
   it "Comprobando que la matriz accede al subindice [0,0]" do
     @mat1.mat[0][0].should eq(2)
   end
+
+   it "Comprobando que la matriz accede al subindice [1,0]" do
+    @mat1.mat[1][0].should eq(3)
+  end
   
 
   
