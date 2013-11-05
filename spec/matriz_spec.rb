@@ -17,4 +17,8 @@ describe Matriz do
     @mat1.ncol.should eq(2)
   end
 
+  it "Comprobando que la matriz se muestra correctamente 2x2" do
+    @mat1.mostrar_Matriz.should eq(" 2 1 \n 3 2 \n ")
+  end
+  
 end
