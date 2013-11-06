@@ -11,6 +11,8 @@ class Matriz
     @mat = Array.new(mat) #inicializo la matriz pasando como parametro una matriz que van a hacer los datos de dicha matriz     
   end
 
+  # metodo que muestra la matriz como una cadena
+  
   def to_s
      cad = " "
     for i in 0...nfil
@@ -21,10 +23,12 @@ class Matriz
       cad << "]"
       cad << "\n "
     end
-    print cad
+    #print cad
     return cad
   end 
 
+  # metodo que suma dos matrices
+  
    def +(other)
       raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
       m = Array.new(mat)
@@ -35,6 +39,20 @@ class Matriz
       end
       return Matriz.new(other.nfil,other.ncol,m) 
    end
+   
+    # metodo que resta dos matrices
+  
+   def +(other)
+      raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
+      m = Array.new(mat)
+      for i in 0...nfil 
+         for j in 0...ncol
+             m[i][j] = @mat[i][j]- other.mat[i][j]
+         end
+      end
+      return Matriz.new(other.nfil,other.ncol,m) 
+   end
+   
   
 end   
   A = [[1,2],[3,4]]
@@ -45,7 +63,7 @@ end
   c = Matriz.new(2,2,C)
   a.to_s
   c = a+b
-  puts
+  #puts
   c.to_s
   
  
