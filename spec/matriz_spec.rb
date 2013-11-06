@@ -17,7 +17,7 @@ describe Matriz do
   end
 
   it "Comprobando que la matriz se muestra correctamente 2x2" do
-    @mat1.mostrar_Matriz.should eq("  [ 2 1 ]\n  [ 3 2 ]\n ")
+    @mat1.to_s.should eq("  [ 2 1 ]\n  [ 3 2 ]\n ")
   end
 
   it "Comprobando que la matriz accede al subindice [0,0]" do
@@ -31,7 +31,7 @@ describe Matriz do
    
   it "Comprobando que las matrices se suman correctamente " do
     sum = @mat1+@mat2
-    sum.mostrar_Matriz.should eq("  [ 6 2 ]\n  [ 11 7 ]\n ")
+    sum.to_s.should eq("  [ 6 2 ]\n  [ 11 7 ]\n ")
     
   end
   
