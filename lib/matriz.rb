@@ -24,13 +24,30 @@ class Matriz
     print m
     return m
   end 
+
+   def +(other)
+      raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
+      m = Array.new(mat)
+      for i in 0...nfil 
+         for j in 0...ncol
+             m[i][j] = @mat[i][j]+ other.mat[i][j]
+         end
+      end
+      return Matriz.new(other.nfil,other.ncol,m) 
+   end
   
 end   
   A = [[1,2],[3,4]]
   B = [[2,4],[6,8]]
   C = [[0,0],[0,0]]
   a = Matriz.new(2,2,A)
+  b = Matriz.new(2,2,B)
+  c = Matriz.new(2,2,C)
   a.mostrar_Matriz
+  c = a+b
+  puts
+  c.mostrar_Matriz
+  
  
 
   
