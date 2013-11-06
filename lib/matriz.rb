@@ -11,18 +11,18 @@ class Matriz
     @mat = Array.new(mat) #inicializo la matriz pasando como parametro una matriz que van a hacer los datos de dicha matriz     
   end
 
-  def mostrar_Matriz
-     m = " "
+  def to_s
+     cad = " "
     for i in 0...nfil
-      m << " [ "
+      cad << " [ "
       for j in 0...ncol
-	m <<  "#{mat[i][j]} "
+	cad <<  "#{mat[i][j]} "
       end
-      m << "]"
-      m << "\n "
+      cad << "]"
+      cad << "\n "
     end
-    print m
-    return m
+    print cad
+    return cad
   end 
 
    def +(other)
