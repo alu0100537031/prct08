@@ -43,10 +43,10 @@ end
   a = Matriz.new(2,2,A)
   b = Matriz.new(2,2,B)
   c = Matriz.new(2,2,C)
-  a.mostrar_Matriz
+  a.to_s
   c = a+b
   puts
-  c.mostrar_Matriz
+  c.to_s
   
  
 
