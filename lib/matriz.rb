@@ -12,19 +12,31 @@ class Matriz
   end
 
   def mostrar_Matriz
-    m = " "
+     m = " "
     for i in 0...nfil
+      m << " [ "
       for j in 0...ncol
 	m <<  "#{mat[i][j]} "
       end
+      m << "]"
       m << "\n "
     end
+    print m
     return m
   end 
   
-end
+end   
   A = [[1,2],[3,4]]
-  m = Matriz.new(2,2,A)
+  B = [[2,4],[6,8]]
+  C = [[0,0],[0,0]]
+  a = Matriz.new(2,2,A)
+  a.mostrar_Matriz
+ 
+
+  
+
+    
+  
 
   
   
