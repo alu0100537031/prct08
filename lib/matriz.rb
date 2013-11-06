@@ -42,7 +42,7 @@ class Matriz
    
     # metodo que resta dos matrices
   
-   def +(other)
+   def -(other)
       raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
       m = Array.new(mat)
       for i in 0...nfil 
