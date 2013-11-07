@@ -1,4 +1,7 @@
 #!/usr/bin/ruby 
+
+require "./lib/racional.rb"
+
 class Matriz
 
   attr_reader :nfil, :ncol, :mat # metodos de acceso (getter)
@@ -8,7 +11,7 @@ class Matriz
   def initialize(nfil,ncol,mat)  
     @nfil = nfil # inicializo numero de filas
     @ncol = ncol # inicializo numero de columnas 
-    @mat = Array.new(mat) #inicializo la matriz pasando como parametro una matriz que van a hacer los datos de dicha matriz     
+    @mat = Array.new(mat) #inicializo la matriz pasando como parametro un objeto de tipo matriz 
   end
 
   # metodo que muestra la matriz como una cadena
