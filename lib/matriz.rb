@@ -23,7 +23,7 @@ class Matriz
       cad << "]"
       cad << "\n "
     end
-    print cad
+    #print cad
     return cad
   end 
 
