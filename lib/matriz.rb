@@ -23,7 +23,6 @@ class Matriz
       cad << "]"
       cad << "\n "
     end
-    #print cad
     return cad
   end 
 
@@ -71,21 +70,7 @@ class Matriz
   
    
 end   
-  A = [[4,7],[8,9]]
-  B = [[2,4],[6,8]]
-  C = [[0,0],[0,0]]
-  a = Matriz.new(2,2,A)
-  b = Matriz.new(2,2,B)
-  c = Matriz.new(2,2,C)
-  c = a+b
-  c.to_s
-  puts
-  c = a-b
-  c.to_s
-  puts
-  c = a*b
-  c.to_s
-  
+
   
 
 
