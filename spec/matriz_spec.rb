@@ -41,6 +41,12 @@ describe Matriz do
     
   end
 
+    it "Comprobando que las matrices se multiplican correctamente " do
+    res = @mat1*@mat2
+    res.to_s.should eq("  [ 11 9 ]\n  [ 31 40 ]\n ")
+    
+  end
+
 
   
 end
