@@ -23,7 +23,7 @@ class Matriz
       cad << "]"
       cad << "\n "
     end
-    #print cad
+    print cad
     return cad
   end 
 
@@ -52,6 +52,21 @@ class Matriz
       end
       return Matriz.new(other.nfil,other.ncol,m) 
    end
+
+   # metodo que multiplica dos matrices (Sobrecarga del operador *)
+   
+   
+  def *(other)
+    m = Array.new(@nfil){Array.new(@ncol){0}}
+    for i in 0...nfil do
+      for j in 0...other.ncol do  
+        for k in 0...ncol do
+          m[i][j] = m[i][j] + self.mat[i][k] * other.mat[k][j]
+         end
+      end
+    end
+    return Matriz.new(self.nfil,other.ncol,m)  
+  end
    
   
    
@@ -66,6 +81,9 @@ end
   c.to_s
   puts
   c = a-b
+  c.to_s
+  puts
+  c = a*b
   c.to_s
   
   
