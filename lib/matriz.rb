@@ -27,7 +27,7 @@ class Matriz
     return cad
   end 
 
-  # metodo que suma dos matrices
+  # metodo que suma dos matrices (Sobrecarga del operador +)
   
    def +(other)
       raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
@@ -40,7 +40,7 @@ class Matriz
       return Matriz.new(other.nfil,other.ncol,m) 
    end
    
-    # metodo que resta dos matrices
+    # metodo que resta dos matrices (Sobrecarga del operador -)
   
    def -(other)
       raise ArgumentError, "Las matrices no son cuadradas." unless @nfil == other.nfil && @ncol == other.ncol
